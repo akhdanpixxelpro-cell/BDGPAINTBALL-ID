@@ -216,14 +216,15 @@
         role="img"
         aria-labelledby="cg-title cg-desc"
     >
-        <img 
-            src="img/vendor.webp" 
-            alt="Kegiatan corporate gathering paintball untuk team building perusahaan di Bandung"
-            class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-            loading="lazy"
-            decoding="async"
-        >
-
+        <img
+  src="img/vendor.webp"
+  loading="eager"
+  fetchpriority="high"
+  decoding="async"
+  width="1200"
+  height="675"
+  alt="Aksi seru permainan paintball di Bandung"
+>
         <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent" aria-hidden="true"></div>
 
         <div class="absolute bottom-6 left-6 z-10">
@@ -828,6 +829,6 @@ function backToTop() {
 
 
 
-<script src="https://cdn.tailwindcss.com" defer></script>
+<script src="https://cdn.tailwindcss.com"></script>
 </body>
 </html>
