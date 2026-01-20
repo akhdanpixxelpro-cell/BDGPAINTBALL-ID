@@ -218,11 +218,35 @@
                     Provider paintball profesional dengan peralatan standar internasional dan medan tempur paling menantang di Lembang dan Pangalengan.
                 </p>
 
-                <div class="hero-actions">
-                    <a href="#produk" class="btn btn-primary">Lihat Paket</a>
-                    <button class="btn btn-outline">Video Teaser</button>
-                </div>
+               <div class="hero-actions" role="group" aria-label="Aksi utama halaman">
+    <a
+        href="#produk"
+        class="btn btn-primary"
+        aria-label="Lihat paket permainan paintball"
+    >
+        Lihat Paket
+    </a>
+
+    <button
+        type="button"
+        class="btn btn-outline"
+        aria-label="Putar video teaser paintball"
+        aria-haspopup="dialog"
+        aria-controls="video-teaser"
+    >
+        Video Teaser
+    </button>
+</div>
+
             </div>
+
+            <style>
+                .btn:focus-visible {
+    outline: 3px solid #f97316;
+    outline-offset: 3px;
+}
+
+            </style>
 
            <div class="hero-img-container">
     <img
