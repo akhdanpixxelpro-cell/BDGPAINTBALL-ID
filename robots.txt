@@ -1,0 +1,16 @@
+User-agent: *
+Allow: /
+
+# Memblokir bot untuk mengakses API internal (jika ada, umum di Vercel/Next.js)
+Disallow: /api/
+Disallow: /_next/
+Disallow: /admin/
+Disallow: /login/
+
+# Mencegah crawling pada URL pencarian internal untuk menghemat crawl budget
+Disallow: /search
+Disallow: /*?query=
+Disallow: /*?q=
+
+# Peta Situs (Sitemap)
+Sitemap: https://bdgpaintball-id.vercel.app/sitemap.xml
