@@ -5,103 +5,148 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vendor Paintball Bandung | Adrenalin di Alam Terbuka</title>
     
-    <meta name="description" content="Vendor Paintball Bandung profesional di Lembang & Pangalengan. Paket paintball corporate gathering, fun war game, outbound & team building dengan standar keamanan internasional.">
-    <meta name="keywords" content="paintball bandung, vendor paintball bandung, paintball lembang, paintball pangalengan, outbound bandung, team building bandung">
+    <meta name="description" content="Vendor Paintball Bandung profesional di Lembang & Pangalengan. Paket paintball corporate gathering, fun war game, outbound & team building standar internasional.">
+    <meta name="keywords" content="paintball bandung, vendor paintball bandung, paintball lembang, paintball pangalengan, outbound bandung">
     <meta name="author" content="BDG Paintball">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://www.bdgpaintball.com/">
-
-    <meta name="google-site-verification" content="ISI_DARI_GSC">
-    <meta name="google" content="nositelinkssearchbox">
-    <meta name="google" content="max-image-preview:large">
-    <meta name="google" content="max-snippet:-1">
-    <meta name="google" content="max-video-preview:-1">
-
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="manifest" href="/site.webmanifest">
     <meta name="theme-color" content="#ea580c">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
-
-    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
-
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-
-    <script src="https://cdn.tailwindcss.com"></script>
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" media="print" onload="this.media='all'">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Rajdhani:wght@500;700&display=swap" rel="stylesheet">
 
     <style>
-        /* RESET & ANTI GOYANG MOBILE */
-        html, body {
-            max-width: 100%;
-            overflow-x: hidden;
+        /* --- CSS RESET & VARIABLES --- */
+        :root {
+            --primary: #ea580c; /* Orange 600 */
+            --primary-dark: #c2410c; /* Orange 700 - Better Contrast */
+            --dark: #09090b; /* Zinc 950 */
+            --light: #fafafa; /* Zinc 50 */
+            --gray: #52525b; /* Zinc 600 */
+            --white: #ffffff;
+            --font-main: 'Inter', sans-serif;
+            --font-head: 'Rajdhani', sans-serif;
         }
-        body { font-family: 'Inter', sans-serif; }
-        h1, h2, h3 { font-family: 'Rajdhani', sans-serif; }
+
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        html { scroll-behavior: smooth; }
+        body { font-family: var(--font-main); color: #1f2937; background-color: var(--light); line-height: 1.5; }
+        img { max-width: 100%; height: auto; display: block; }
+        a { text-decoration: none; color: inherit; transition: 0.3s; }
+        ul { list-style: none; }
+        button { cursor: pointer; border: none; background: none; font-family: inherit; }
+
+        /* --- TYPOGRAPHY --- */
+        h1, h2, h3, h4 { font-family: var(--font-head); font-weight: 700; line-height: 1.2; text-transform: uppercase; }
+        .container { max-width: 1280px; margin: 0 auto; padding: 0 1.5rem; }
+        .text-center { text-align: center; }
+        .text-primary { color: var(--primary); }
+        .font-bold { font-weight: 700; }
+        .italic { font-style: italic; }
+
+        /* --- COMPONENTS --- */
+        .btn {
+            display: inline-block;
+            padding: 0.75rem 1.5rem;
+            border-radius: 9999px;
+            font-weight: 700;
+            text-align: center;
+            font-size: 0.875rem;
+            text-transform: uppercase;
+        }
+        .btn-primary { background-color: var(--primary); color: white; }
+        .btn-primary:hover { background-color: var(--primary-dark); }
+        .btn-outline { border: 1px solid rgba(255,255,255,0.3); color: white; }
+        .btn-outline:hover { background-color: rgba(255,255,255,0.1); }
+        .btn-block { width: 100%; display: block; border-radius: 0.5rem; }
         
-        /* IMAGE SAFE */
-        img {
-            max-width: 100%;
-            height: auto;
-            display: block;
-        }
+        /* --- NAVBAR --- */
+        nav { position: sticky; top: 0; z-index: 50; background-color: rgba(0,0,0,0.95); color: white; padding: 1rem 0; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); }
+        .nav-wrapper { display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 1.5rem; font-weight: 700; font-family: var(--font-head); }
+        .nav-links { display: none; gap: 1.5rem; font-size: 0.875rem; font-weight: 600; text-transform: uppercase; }
+        .nav-links a:hover { color: var(--primary); }
+        .menu-btn { display: block; color: white; }
+        
+        /* --- HEADER / HERO --- */
+        header { background-color: #18181b; color: white; padding: 4rem 0; overflow: hidden; }
+        .hero-content { display: flex; flex-direction: column; gap: 3rem; align-items: center; }
+        .hero-text h1 { font-size: 2.5rem; margin-bottom: 1.5rem; }
+        .hero-text p { color: #d4d4d8; margin-bottom: 2rem; max-width: 600px; }
+        .hero-actions { display: flex; gap: 1rem; flex-wrap: wrap; }
+        .hero-img { border-radius: 1rem; overflow: hidden; border: 1px solid rgba(234, 88, 12, 0.3); }
 
-        /* FIX SCALE ELEMENT MOBILE */
-        .scale-safe { transform: none; }
-        @media (min-width: 768px) {
-            .scale-safe { transform: scale(1.05); }
-        }
+        /* --- SECTIONS --- */
+        .section-py { padding: 5rem 0; }
+        .grid-3 { display: grid; grid-template-columns: 1fr; gap: 2rem; margin-top: 3rem; }
+        
+        /* Card Features */
+        .card { background: white; padding: 1.5rem; border-radius: 0.75rem; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1); border-bottom: 4px solid var(--primary); height: 100%; }
+        .icon-box svg { width: 40px; height: 40px; fill: var(--primary); margin-bottom: 1rem; }
 
-        /* SECTION HEAVY */
-        .section-safe { overflow: hidden; }
+        /* Service */
+        .service-grid { display: grid; grid-template-columns: 1fr; gap: 1.5rem; }
+        .service-item { position: relative; height: 300px; border-radius: 1rem; overflow: hidden; background: black; }
+        .service-item img { width: 100%; height: 100%; object-fit: cover; opacity: 0.7; transition: transform 0.5s; }
+        .service-item:hover img { transform: scale(1.1); }
+        .service-text { position: absolute; bottom: 1.5rem; left: 1.5rem; z-index: 10; color: white; }
+        
+        /* Pricing */
+        .pricing-card { border: 2px solid #e5e7eb; border-radius: 1rem; padding: 2rem; position: relative; display: flex; flex-direction: column; }
+        .pricing-card.popular { border-color: var(--primary); background-color: #18181b; color: white; transform: scale(1.02); box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1); }
+        .price { font-size: 2rem; font-weight: 700; color: var(--primary); margin-bottom: 1.5rem; }
+        .pricing-list li { margin-bottom: 0.75rem; display: flex; align-items: center; gap: 0.5rem; font-size: 0.95rem; }
+        .check-icon { color: #22c55e; width: 16px; height: 16px; }
 
-        /* BUTTON MOBILE */
-        .btn-safe { width: 100%; }
-        @media (min-width: 768px) {
-            .btn-safe { width: auto; }
-        }
+        /* Blog */
+        .blog-card { background: #fafafa; border-radius: 1rem; overflow: hidden; border: 1px solid #f4f4f5; transition: 0.3s; height: 100%; display: flex; flex-direction: column; }
+        .blog-card:hover { box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1); }
+        .blog-img { height: 200px; position: relative; overflow: hidden; }
+        .blog-img img { width: 100%; height: 100%; object-fit: cover; }
+        .blog-content { padding: 1.5rem; flex-grow: 1; display: flex; flex-direction: column; }
+        .blog-meta { font-size: 0.75rem; color: #a1a1aa; margin-bottom: 0.5rem; }
+        
+        /* FAQ */
+        .faq-item { background: white; border: 1px solid #e5e7eb; border-radius: 1rem; margin-bottom: 1rem; overflow: hidden; }
+        .faq-btn { width: 100%; text-align: left; padding: 1.25rem; font-weight: 700; display: flex; justify-content: space-between; align-items: center; }
+        .faq-content { max-height: 0; overflow: hidden; transition: max-height 0.3s ease-out; background: #fafafa; }
+        .faq-body { padding: 1.25rem; border-top: 1px solid #e5e7eb; color: var(--gray); font-size: 0.95rem; }
+        .rotate { transform: rotate(180deg); transition: 0.3s; }
 
-        /* FAB STYLES */
-        .fab-container {
-            position: fixed;
-            bottom: 24px;
-            right: 24px;
-            z-index: 9999;
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-        }
-        .fab-btn {
-            width: 58px;
-            height: 58px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: #000;
-            box-shadow: 0 6px 18px rgba(0,0,0,.35);
-            cursor: pointer;
-            transition: transform .3s;
-        }
+        /* Footer */
+        footer { background-color: #09090b; color: #a1a1aa; padding-top: 5rem; padding-bottom: 2rem; border-top: 4px solid var(--primary); }
+        .footer-grid { display: grid; grid-template-columns: 1fr; gap: 3rem; margin-bottom: 3rem; }
+        .footer-links a { display: block; margin-bottom: 0.75rem; font-size: 0.9rem; }
+        .footer-links a:hover { color: var(--primary); }
+        
+        /* Floating Button */
+        .fab-container { position: fixed; bottom: 20px; right: 20px; z-index: 100; display: flex; flex-direction: column; gap: 10px; }
+        .fab-btn { width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 12px rgba(0,0,0,0.2); transition: transform 0.2s; }
         .fab-btn:hover { transform: scale(1.1); }
         .fab-wa { background: #25D366; }
-        .fab-btn svg { width: 24px; height: 24px; }
-        .fab-top {
-            opacity: 0;
-            pointer-events: none;
-            transition: opacity 0.3s ease;
-        }
-        .fab-top.show {
-            opacity: 1;
-            pointer-events: auto;
-        }
-    </style>
+        .fab-top { background: black; opacity: 0; pointer-events: none; transition: 0.3s; }
+        .fab-top.show { opacity: 1; pointer-events: auto; }
 
+        /* --- RESPONSIVE --- */
+        @media (min-width: 768px) {
+            .nav-links { display: flex; }
+            .menu-btn { display: none; }
+            .hero-content { flex-direction: row; text-align: left; }
+            .hero-text h1 { font-size: 3.5rem; }
+            .hero-text, .hero-img-container { width: 50%; }
+            .grid-3 { grid-template-columns: repeat(3, 1fr); }
+            .service-grid { grid-template-columns: repeat(2, 1fr); }
+            .footer-grid { grid-template-columns: repeat(4, 1fr); }
+            .mobile-menu { display: none !important; } /* Force hide on desktop */
+        }
+        
+        /* Utility */
+        .hidden { display: none; }
+        .block { display: block; }
+        .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); border: 0; }
+    </style>
+    
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -126,439 +171,324 @@
     </script>
 </head>
 
-<body class="bg-gray-50 text-gray-800">
+<body>
 
-    <nav class="sticky top-0 z-50 bg-black/90 text-white shadow-lg">
-        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
-            <div class="text-2xl font-bold text-orange-500">
-                BDG<span class="text-white">PAINTBALL</span>
+    <nav>
+        <div class="container nav-wrapper">
+            <div class="logo">
+                <span class="text-primary">BDG</span>PAINTBALL
             </div>
 
-            <ul class="hidden md:flex space-x-6 font-medium text-sm uppercase tracking-wider">
-                <li><a href="#about" class="hover:text-orange-500">Tentang Kami</a></li>
-                <li><a href="#service" class="hover:text-orange-500">Layanan</a></li>
-                <li><a href="#produk" class="hover:text-orange-500">Harga</a></li>
-                <li><a href="#faq" class="hover:text-orange-500">FAQ</a></li>
+            <ul class="nav-links">
+                <li><a href="#about" aria-label="Tentang Kami">Tentang Kami</a></li>
+                <li><a href="#service" aria-label="Layanan">Layanan</a></li>
+                <li><a href="#produk" aria-label="Harga">Harga</a></li>
+                <li><a href="#faq" aria-label="FAQ">FAQ</a></li>
             </ul>
 
-            <a href="https://wa.me/62812345678" class="hidden md:inline-block bg-orange-600 hover:bg-orange-700 px-5 py-2 rounded-full font-bold transition text-sm">
+            <a href="https://wa.me/62812345678" class="btn btn-primary hidden md:block" aria-label="Booking via WhatsApp">
                 Booking Sekarang
             </a>
 
-            <button id="menu-btn" class="md:hidden focus:outline-none" aria-label="Toggle Menu">
-                <svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
-                </svg>
+            <button id="menu-btn" class="menu-btn" aria-label="Buka Menu Navigasi" aria-expanded="false">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
             </button>
         </div>
 
-        <div id="mobile-menu" class="md:hidden hidden bg-black/95 border-t border-white/10">
-            <ul class="flex flex-col text-center py-4 space-y-4 font-medium uppercase tracking-wider">
-                <li><a href="#about" class="block hover:text-orange-500">Tentang Kami</a></li>
-                <li><a href="#service" class="block hover:text-orange-500">Layanan</a></li>
-                <li><a href="#produk" class="block hover:text-orange-500">Harga</a></li>
-                <li><a href="#faq" class="block hover:text-orange-500">FAQ</a></li>
-                <li>
-                    <a href="https://wa.me/62812345678" class="inline-block bg-orange-600 hover:bg-orange-700 px-6 py-2 rounded-full font-bold transition text-sm">
-                        Booking Sekarang
-                    </a>
-                </li>
+        <div id="mobile-menu" class="hidden" style="background: rgba(0,0,0,0.95); padding: 1rem; border-top: 1px solid rgba(255,255,255,0.1);">
+            <ul style="text-align: center; display: flex; flex-direction: column; gap: 1rem; font-weight: 600; text-transform: uppercase;">
+                <li><a href="#about" class="block">Tentang Kami</a></li>
+                <li><a href="#service" class="block">Layanan</a></li>
+                <li><a href="#produk" class="block">Harga</a></li>
+                <li><a href="#faq" class="block">FAQ</a></li>
+                <li><a href="https://wa.me/62812345678" class="btn btn-primary btn-block">Booking Sekarang</a></li>
             </ul>
         </div>
     </nav>
 
-    <header class="relative bg-zinc-900 text-white overflow-hidden">
-        <div class="container mx-auto px-5 sm:px-6 py-14 sm:py-16 md:py-24">
-            <div class="flex flex-col md:flex-row items-center gap-12">
-                <div class="md:w-1/2 text-center md:text-left z-10">
-                    <h1 class="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-extrabold leading-tight mb-5">
-                        RASAKAN SENSASI
-                        <span class="block md:inline text-orange-500 text-outline">TEMPUR</span>
-                        DI HUTAN BANDUNG
-                    </h1>
+    <header>
+        <div class="container hero-content">
+            <div class="hero-text">
+                <h1>
+                    Rasakan Sensasi
+                    <span class="text-primary">Tempur</span>
+                    di Hutan Bandung
+                </h1>
 
-                    <p class="text-base sm:text-lg text-gray-300 mb-8 max-w-xl mx-auto md:mx-0">
-                        Provider paintball profesional dengan peralatan standar internasional dan medan tempur paling menantang di Lembang dan Pangalengan.
-                    </p>
+                <p>
+                    Provider paintball profesional dengan peralatan standar internasional dan medan tempur paling menantang di Lembang dan Pangalengan.
+                </p>
 
-                    <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
-                        <button class="bg-orange-600 px-8 py-4 rounded-lg font-bold text-base sm:text-lg hover:scale-105 transition duration-300">
-                            Lihat Paket
-                        </button>
-                        <button class="border border-white/30 px-8 py-4 rounded-lg font-bold text-base sm:text-lg hover:bg-white/10 transition duration-300">
-                            Video Teaser
-                        </button>
-                    </div>
+                <div class="hero-actions">
+                    <a href="#produk" class="btn btn-primary">Lihat Paket</a>
+                    <button class="btn btn-outline">Video Teaser</button>
                 </div>
+            </div>
 
-                <div class="md:w-1/2 relative">
-                    <div class="w-full h-72 sm:h-80 md:h-[450px] overflow-hidden rounded-2xl border border-orange-500/30 bg-zinc-800">
-                        <img
-                            src="img/vendor.webp"
-                            alt="Aksi seru permainan paintball di Bandung"
-                            class="w-full h-full object-cover"
-                            fetchpriority="high"
-                            loading="eager"
-                            decoding="async"
-                        >
-                    </div>
-                </div>
+            <div class="hero-img-container">
+                <img
+                    src="img/vendor.webp"
+                    alt="Aksi seru permainan paintball di Bandung"
+                    class="hero-img"
+                    width="600"
+                    height="400"
+                    fetchpriority="high"
+                    decoding="async"
+                >
             </div>
         </div>
     </header>
 
-    <section id="about" class="py-20 container mx-auto px-6 text-center">
-        <h2 class="text-4xl font-bold mb-6 italic">MENGAPA BDG PAINTBALL?</h2>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
-            <div class="p-6 bg-white shadow-xl rounded-xl border-b-4 border-orange-500">
-                <i class="fas fa-shield-alt text-4xl text-orange-500 mb-4"></i>
-                <h3 class="text-xl font-bold mb-2">Safety First</h3>
-                <p class="text-gray-600 text-sm">Goggle anti-fog dan rompi pelindung standar kompetisi dunia.</p>
-            </div>
-            <div class="p-6 bg-white shadow-xl rounded-xl border-b-4 border-orange-500">
-                <i class="fas fa-map-marked-alt text-4xl text-orange-500 mb-4"></i>
-                <h3 class="text-xl font-bold mb-2">Lokasi Strategis</h3>
-                <p class="text-gray-600 text-sm">Pilihan medan tempur di Hutan Pinus yang sejuk dan asri.</p>
-            </div>
-            <div class="p-6 bg-white shadow-xl rounded-xl border-b-4 border-orange-500">
-                <i class="fas fa-users text-4xl text-orange-500 mb-4"></i>
-                <h3 class="text-xl font-bold mb-2">Instruktur Ahli</h3>
-                <p class="text-gray-600 text-sm">Dipandu oleh wasit dan pelatih profesional berpengalaman.</p>
-            </div>
-        </div>
-    </section>
-
-    <section id="service" class="bg-zinc-100 py-20 px-6">
-        <div class="container mx-auto">
-            <h2 class="text-4xl font-bold text-center mb-12 uppercase tracking-tighter">Layanan Utama Kami</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div class="group relative overflow-hidden rounded-2xl h-64 bg-black" role="img" aria-labelledby="cg-title cg-desc">
-                    <img src="img/vendor.webp" loading="lazy" decoding="async" class="absolute inset-0 w-full h-full object-cover opacity-80 transition-transform duration-500 group-hover:scale-110" alt="Corporate Gathering Paintball">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent" aria-hidden="true"></div>
-                    <div class="absolute bottom-6 left-6 z-10">
-                        <h3 id="cg-title" class="text-2xl font-bold text-white uppercase">Corporate Gathering</h3>
-                        <p id="cg-desc" class="text-orange-400">Team Building &amp; Refreshing Karyawan</p>
+    <section id="about" class="section-py">
+        <div class="container text-center">
+            <h2 class="italic">Mengapa BDG Paintball?</h2>
+            <div class="grid-3">
+                <div class="card">
+                    <div class="icon-box">
+                        <svg viewBox="0 0 24 24"><path d="M12 2L3 7v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-9-5zm0 18c-4.31-1.1-7-5.17-7-9.8V8.3l7-3.89 7 3.89v1.9c0 4.63-2.69 8.7-7 9.8z"/></svg>
                     </div>
+                    <h3>Safety First</h3>
+                    <p class="italic" style="margin-top:0.5rem; color:var(--gray)">Goggle anti-fog dan rompi pelindung standar kompetisi dunia.</p>
                 </div>
-
-                <div class="group relative overflow-hidden rounded-2xl h-64 bg-black" role="img" aria-labelledby="fw-title fw-desc">
-                    <img src="img/vendor4.webp" alt="Permainan fun war game paintball seru" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy" decoding="async">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent" aria-hidden="true"></div>
-                    <div class="absolute bottom-6 left-6 z-10">
-                        <h3 id="fw-title" class="text-2xl font-bold text-white uppercase">Fun War Game</h3>
-                        <p id="fw-desc" class="text-orange-400">Main Seru Bareng Teman &amp; Komunitas</p>
+                <div class="card">
+                    <div class="icon-box">
+                        <svg viewBox="0 0 24 24"><path d="M20.5 3l-6 2.25L8.5 3 3.5 4.88v15.15l6-2.25 6 2.25 5-1.88V3zM14 17.55l-5.5-2.06v-9l5.5 2.06v9z"/></svg>
                     </div>
+                    <h3>Lokasi Strategis</h3>
+                    <p class="italic" style="margin-top:0.5rem; color:var(--gray)">Pilihan medan tempur di Hutan Pinus yang sejuk dan asri.</p>
+                </div>
+                <div class="card">
+                    <div class="icon-box">
+                        <svg viewBox="0 0 24 24"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg>
+                    </div>
+                    <h3>Instruktur Ahli</h3>
+                    <p class="italic" style="margin-top:0.5rem; color:var(--gray)">Dipandu oleh wasit dan pelatih profesional berpengalaman.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="bg-orange-600 py-10">
-        <div class="container mx-auto px-6 flex flex-col md:flex-row items-center justify-between text-white text-center md:text-left">
-            <h2 class="text-3xl font-bold mb-4 md:mb-0 uppercase">Dapatkan Diskon 15% Untuk Grup Besar!</h2>
-            <button class="bg-black text-white px-10 py-3 rounded-full font-bold hover:bg-zinc-800 transition">Ambil Diskon</button>
-        </div>
-    </section>
+    <section id="service" class="section-py" style="background-color: #f4f4f5;">
+        <div class="container">
+            <h2 class="text-center" style="margin-bottom: 3rem;">Layanan Utama Kami</h2>
+            <div class="service-grid">
+                <div class="service-item">
+                    <img src="img/vendor.webp" width="600" height="400" loading="lazy" decoding="async" alt="Tim karyawan melakukan corporate gathering paintball">
+                    <div class="service-text">
+                        <h3>Corporate Gathering</h3>
+                        <p class="text-primary font-bold">Team Building &amp; Refreshing</p>
+                    </div>
+                </div>
 
-    <section id="produk" class="py-20 container mx-auto px-6">
-        <h2 class="text-4xl font-bold text-center mb-16">PILIHAN PAKET HARGA</h2>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div class="border-2 border-gray-200 rounded-2xl p-8 hover:border-orange-500 transition-all">
-                <h3 class="text-xl font-bold mb-2 uppercase tracking-widest">Paket Skirmish</h3>
-                <div class="text-3xl font-bold text-orange-600 mb-6">Rp 85.000 <span class="text-sm text-gray-500">/orang</span></div>
-                <ul class="space-y-3 mb-8 text-gray-600 italic">
-                    <li><i class="fas fa-check text-green-500 mr-2"></i> 40 Peluru</li>
-                    <li><i class="fas fa-check text-green-500 mr-2"></i> Goggle & Body Protector</li>
-                    <li><i class="fas fa-check text-green-500 mr-2"></i> Senjata / Marker</li>
-                    <li><i class="fas fa-check text-green-500 mr-2"></i> Mineral Water</li>
-                </ul>
-                <button class="w-full py-3 rounded font-bold border-2 border-orange-500 text-orange-500 hover:bg-orange-500 hover:text-white transition">Pilih Paket</button>
-            </div>
-            <div class="border-4 border-orange-500 rounded-2xl p-8 bg-zinc-900 text-white scale-safe shadow-2xl relative">
-                <span class="absolute -top-4 left-1/2 -translate-x-1/2 bg-orange-600 text-xs px-4 py-1 rounded-full uppercase font-bold">Terpopuler</span>
-                <h3 class="text-xl font-bold mb-2 uppercase tracking-widest">Paket Battalion</h3>
-                <div class="text-3xl font-bold text-orange-500 mb-6">Rp 150.000 <span class="text-sm text-gray-400">/orang</span></div>
-                <ul class="space-y-3 mb-8 italic">
-                    <li><i class="fas fa-check text-orange-500 mr-2"></i> 80 Peluru</li>
-                    <li><i class="fas fa-check text-orange-500 mr-2"></i> Gear Lengkap</li>
-                    <li><i class="fas fa-check text-orange-500 mr-2"></i> Makan Siang (Nasi Box)</li>
-                    <li><i class="fas fa-check text-orange-500 mr-2"></i> Dokumentasi Foto</li>
-                </ul>
-                <button class="w-full py-3 rounded font-bold bg-orange-600 hover:bg-orange-700 transition">Pilih Paket</button>
-            </div>
-            <div class="border-2 border-gray-200 rounded-2xl p-8 hover:border-orange-500 transition-all">
-                <h3 class="text-xl font-bold mb-2 uppercase tracking-widest">Paket All-In</h3>
-                <div class="text-3xl font-bold text-orange-600 mb-6">Rp 350.000 <span class="text-sm text-gray-500">/orang</span></div>
-                <ul class="space-y-3 mb-8 text-gray-600 italic">
-                    <li><i class="fas fa-check text-green-500 mr-2"></i> Paintball War</li>
-                    <li><i class="fas fa-check text-green-500 mr-2"></i> Rafting / Offroad</li>
-                    <li><i class="fas fa-check text-green-500 mr-2"></i> Makan Siang & Snack</li>
-                    <li><i class="fas fa-check text-green-500 mr-2"></i> Dokumentasi Video</li>
-                </ul>
-                <button class="w-full py-3 rounded font-bold border-2 border-orange-500 text-orange-500 hover:bg-orange-500 hover:text-white transition">Pilih Paket</button>
+                <div class="service-item">
+                    <img src="img/vendor4.webp" width="600" height="400" loading="lazy" decoding="async" alt="Sekelompok teman bermain fun war game paintball">
+                    <div class="service-text">
+                        <h3>Fun War Game</h3>
+                        <p class="text-primary font-bold">Main Seru Bareng Komunitas</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-   <section id="blog" class="py-20 bg-white">
-    <div class="container mx-auto px-6">
-        <div class="flex flex-col md:flex-row justify-between items-end mb-12 gap-4">
-            <div class="max-w-2xl text-center md:text-left">
-                <h2 class="text-4xl md:text-5xl font-bold uppercase tracking-tighter italic border-l-8 border-orange-600 pl-4">
-                    Edukasi & <span class="text-orange-600">Berita Terbaru</span>
-                </h2>
-                <p class="text-gray-500 mt-4 leading-relaxed">
-                    Dapatkan tips taktik paintball, informasi lokasi outbound terbaik di Bandung, serta promo paket gathering kantor terbaru melalui blog kami.
-                </p>
+    <section style="background-color: var(--primary); padding: 3rem 0; color: white;">
+        <div class="container" style="display: flex; flex-direction: column; align-items: center; gap: 1.5rem; text-align: center;">
+            <h2 style="font-size: 1.8rem; border:none;">Dapatkan Diskon 15% Untuk Grup Besar!</h2>
+            <a href="https://wa.me/62812345678" class="btn" style="background: black; color: white;">Ambil Diskon</a>
+        </div>
+    </section>
+
+    <section id="produk" class="section-py">
+        <div class="container">
+            <h2 class="text-center" style="margin-bottom: 3rem;">Pilihan Paket Harga</h2>
+            <div class="grid-3">
+                <div class="pricing-card">
+                    <h3>Paket Skirmish</h3>
+                    <div class="price">Rp 85.000 <span style="font-size: 1rem; color: #9ca3af; font-weight: 400;">/orang</span></div>
+                    <ul class="pricing-list">
+                        <li><svg class="check-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> 40 Peluru</li>
+                        <li><svg class="check-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Goggle & Body Protector</li>
+                        <li><svg class="check-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Senjata / Marker</li>
+                    </ul>
+                    <button class="btn btn-block" style="border: 2px solid var(--primary); color: var(--primary); margin-top: auto;">Pilih Paket</button>
+                </div>
+
+                <div class="pricing-card popular">
+                    <div style="position: absolute; top: -12px; left: 50%; transform: translateX(-50%); background: var(--primary); padding: 4px 12px; font-size: 0.75rem; border-radius: 99px; font-weight: bold; text-transform: uppercase;">Terpopuler</div>
+                    <h3>Paket Battalion</h3>
+                    <div class="price">Rp 150.000 <span style="font-size: 1rem; color: #9ca3af; font-weight: 400;">/orang</span></div>
+                    <ul class="pricing-list">
+                        <li><svg class="check-icon" style="color: var(--primary);" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> 80 Peluru</li>
+                        <li><svg class="check-icon" style="color: var(--primary);" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Gear Lengkap</li>
+                        <li><svg class="check-icon" style="color: var(--primary);" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Makan Siang (Nasi Box)</li>
+                    </ul>
+                    <button class="btn btn-primary btn-block" style="margin-top: auto;">Pilih Paket</button>
+                </div>
+
+                <div class="pricing-card">
+                    <h3>Paket All-In</h3>
+                    <div class="price">Rp 350.000 <span style="font-size: 1rem; color: #9ca3af; font-weight: 400;">/orang</span></div>
+                    <ul class="pricing-list">
+                        <li><svg class="check-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Paintball War</li>
+                        <li><svg class="check-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Rafting / Offroad</li>
+                        <li><svg class="check-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Makan & Dokumentasi</li>
+                    </ul>
+                    <button class="btn btn-block" style="border: 2px solid var(--primary); color: var(--primary); margin-top: auto;">Pilih Paket</button>
+                </div>
             </div>
         </div>
+    </section>
 
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <article class="group bg-zinc-50 rounded-2xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300">
-                <div class="relative overflow-hidden h-56">
-                    <img src="img/vendor3.webp" alt="Taktik permainan paintball" class="w-full h-full object-cover group-hover:scale-110 transition duration-500" loading="lazy" decoding="async">
-                    <span class="absolute top-4 left-4 bg-orange-600 text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase">Taktik</span>
-                </div>
-                <div class="p-6">
-                    <div class="flex items-center text-xs text-gray-400 mb-3 gap-3">
-                        <span><i class="far fa-calendar mr-1"></i> 19 Jan 2026</span>
-                        <span><i class="far fa-user mr-1"></i> Admin</span>
-                    </div>
-                    <h3 class="text-xl font-bold mb-3 group-hover:text-orange-600 transition leading-tight">
-                        <a href="artikel-1.html">5 Taktik Tempur Paintball Hutan Agar Tim Kamu Tidak Terkalahkan</a>
-                    </h3>
-                    <a href="#" class="text-orange-600 font-bold text-sm flex items-center gap-2 hover:gap-4 transition-all">Baca Selengkapnya <i class="fas fa-long-arrow-alt-right"></i></a>
-                </div>
-            </article>
-
-            <article class="group bg-zinc-50 rounded-2xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300">
-                <div class="relative overflow-hidden h-56">
-                    <img src="img/vendor.webp" alt="Lokasi paintball alam terbuka" class="w-full h-full object-cover group-hover:scale-110 transition duration-500" loading="lazy" decoding="async">
-                    <span class="absolute top-4 left-4 bg-orange-600 text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase">Destinasi</span>
-                </div>
-                <div class="p-6">
-                    <div class="flex items-center text-xs text-gray-400 mb-3 gap-3">
-                        <span><i class="far fa-calendar mr-1"></i> 15 Jan 2026</span>
-                        <span><i class="far fa-user mr-1"></i> Admin</span>
-                    </div>
-                    <h3 class="text-xl font-bold mb-3 group-hover:text-orange-600 transition leading-tight">
-                        <a href="#">Review Lokasi: Kelebihan Main Paintball di Cikole vs Pangalengan</a>
-                    </h3>
-                    <a href="artike-2.html" class="text-orange-600 font-bold text-sm flex items-center gap-2 hover:gap-4 transition-all">Baca Selengkapnya <i class="fas fa-long-arrow-alt-right"></i></a>
-                </div>
-            </article>
-
-            <article class="group bg-zinc-50 rounded-2xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300">
-                <div class="relative overflow-hidden h-56">
-                    <img src="img/vendor5.webp" alt="Paintball untuk team building" class="w-full h-full object-cover group-hover:scale-110 transition duration-500" loading="lazy" decoding="async">
-                    <span class="absolute top-4 left-4 bg-orange-600 text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase">Gathering</span>
-                </div>
-                <div class="p-6">
-                    <div class="flex items-center text-xs text-gray-400 mb-3 gap-3">
-                        <span><i class="far fa-calendar mr-1"></i> 10 Jan 2026</span>
-                        <span><i class="far fa-user mr-1"></i> Admin</span>
-                    </div>
-                    <h3 class="text-xl font-bold mb-3 group-hover:text-orange-600 transition leading-tight">
-                        <a href="artikel-3.html">Mengapa Paintball Menjadi Aktivitas Team Building Terbaik Saat Ini?</a>
-                    </h3>
-                    <a href="#" class="text-orange-600 font-bold text-sm flex items-center gap-2 hover:gap-4 transition-all">Baca Selengkapnya <i class="fas fa-long-arrow-alt-right"></i></a>
-                </div>
-            </article>
-        </div>
-    </div>
-</section>
-
-<section id="faq" class="py-20 bg-zinc-50">
-    <div class="container mx-auto px-6 max-w-4xl">
-        <div class="text-center mb-12">
-            <h2 class="text-4xl md:text-5xl font-bold uppercase tracking-tighter italic mb-4">
-                Pertanyaan <span class="text-orange-600">Sering Diajukan</span>
-            </h2>
-            <p class="text-gray-500 italic">Segala hal yang perlu Anda ketahui sebelum terjun ke medan tempur.</p>
-        </div>
-
-        <div class="space-y-4">
-            <div class="bg-white border border-gray-200 rounded-2xl overflow-hidden shadow-sm">
-                <button class="w-full flex justify-between items-center p-5 md:p-6 text-left hover:bg-zinc-50 transition" onclick="toggleFaq(this)">
-                    <span class="font-bold text-zinc-800 md:text-lg italic">Berapa usia minimal untuk bermain paintball?</span>
-                    <i class="fas fa-chevron-down text-orange-600 transition-transform duration-300"></i>
-                </button>
-                <div class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out bg-zinc-50 faq-content">
-                    <div class="p-6 text-gray-600 text-sm md:text-base leading-relaxed border-t border-gray-100">
-                        Usia minimal yang disarankan adalah 10 tahun. Untuk peserta di bawah 12 tahun, wajib didampingi oleh orang tua atau wali.
-                    </div>
-                </div>
+    <section id="faq" class="section-py" style="background-color: #fafafa;">
+        <div class="container" style="max-width: 800px;">
+            <div class="text-center" style="margin-bottom: 3rem;">
+                <h2>Pertanyaan <span class="text-primary">Sering Diajukan</span></h2>
             </div>
 
-            <div class="bg-white border border-gray-200 rounded-2xl overflow-hidden shadow-sm">
-                <button class="w-full flex justify-between items-center p-5 md:p-6 text-left hover:bg-zinc-50 transition" onclick="toggleFaq(this)">
-                    <span class="font-bold text-zinc-800 md:text-lg italic">Apakah peluru paintball berbahaya?</span>
-                    <i class="fas fa-chevron-down text-orange-600 transition-transform duration-300"></i>
-                </button>
-                <div class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out bg-zinc-50 faq-content">
-                    <div class="p-6 text-gray-600 text-sm md:text-base leading-relaxed border-t border-gray-100">
-                        Tidak. Peluru kami terbuat dari bahan gelatin yang aman bagi lingkungan (biodegradable) dan mudah dicuci.
+            <div class="faq-list">
+                <div class="faq-item">
+                    <button class="faq-btn" onclick="toggleFaq(this)" aria-expanded="false">
+                        Berapa usia minimal untuk bermain paintball?
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+                    </button>
+                    <div class="faq-content">
+                        <div class="faq-body">
+                            Usia minimal yang disarankan adalah 10 tahun. Untuk peserta di bawah 12 tahun, wajib didampingi oleh orang tua atau wali.
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="bg-white border border-gray-200 rounded-2xl overflow-hidden shadow-sm">
-                <button class="w-full flex justify-between items-center p-5 md:p-6 text-left hover:bg-zinc-50 transition" onclick="toggleFaq(this)">
-                    <span class="font-bold text-zinc-800 md:text-lg italic">Apa yang terjadi jika hujan?</span>
-                    <i class="fas fa-chevron-down text-orange-600 transition-transform duration-300"></i>
-                </button>
-                <div class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out bg-zinc-50 faq-content">
-                    <div class="p-6 text-gray-600 text-sm md:text-base leading-relaxed border-t border-gray-100">
-                        Hujan ringan menambah keseruan! Namun jika badai petir, permainan dihentikan sementara demi keselamatan.
+                <div class="faq-item">
+                    <button class="faq-btn" onclick="toggleFaq(this)" aria-expanded="false">
+                        Apakah peluru paintball berbahaya?
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+                    </button>
+                    <div class="faq-content">
+                        <div class="faq-body">
+                            Tidak. Peluru kami terbuat dari bahan gelatin yang aman bagi lingkungan (biodegradable), tidak beracun, dan mudah dicuci jika terkena pakaian.
+                        </div>
                     </div>
                 </div>
-            </div>
-            
-             <div class="bg-white border border-gray-200 rounded-2xl overflow-hidden shadow-sm">
-                <button class="w-full flex justify-between items-center p-5 md:p-6 text-left hover:bg-zinc-50 transition" onclick="toggleFaq(this)">
-                    <span class="font-bold text-zinc-800 md:text-lg italic">Jumlah minimal pemain?</span>
-                    <i class="fas fa-chevron-down text-orange-600 transition-transform duration-300"></i>
-                </button>
-                <div class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out bg-zinc-50 faq-content">
-                    <div class="p-6 text-gray-600 text-sm md:text-base leading-relaxed border-t border-gray-100">
-                        Idealnya 10 orang (5 vs 5), namun kami menerima grup kecil minimal 4-6 orang.
+
+                <div class="faq-item">
+                    <button class="faq-btn" onclick="toggleFaq(this)" aria-expanded="false">
+                        Jumlah minimal pemain?
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+                    </button>
+                    <div class="faq-content">
+                        <div class="faq-body">
+                            Idealnya 10 orang (5 vs 5), namun kami menerima grup kecil minimal 4-6 orang dengan penyesuaian skenario permainan.
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
+    </section>
 
-        <div class="mt-12 text-center">
-            <p class="text-gray-500 mb-4 italic text-sm">Punya pertanyaan lain yang belum terjawab?</p>
-            <a href="https://wa.me/62812345678" class="inline-flex items-center gap-2 text-orange-600 font-bold hover:underline">
-                <i class="fab fa-whatsapp"></i> Hubungi Customer Service Kami
-            </a>
-        </div>
-    </div>
-</section>
-
-    <footer class="bg-zinc-950 text-white pt-20 pb-10 border-t-4 border-orange-600">
-    <div class="container mx-auto px-6">
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
-            <div class="space-y-6">
-                <div class="text-3xl font-bold tracking-tighter italic text-orange-500">
-                    BDG<span class="text-white">PAINTBALL</span>
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <div class="logo mb-4" style="margin-bottom: 1rem;">
+                        <span class="text-primary">BDG</span>PAINTBALL
+                    </div>
+                    <p style="font-size: 0.9rem; line-height: 1.6;">
+                        Provider Paintball & Outbound No. 1 di Bandung. Spesialis simulasi tempur hutan pinus dengan standar keamanan internasional sejak tahun 2015.
+                    </p>
                 </div>
-                <p class="text-gray-400 text-sm leading-relaxed italic">
-                    Provider Paintball & Outbound No. 1 di Bandung. Spesialis simulasi tempur hutan pinus dengan standar keamanan internasional sejak tahun 2015.
-                </p>
-                <div class="flex gap-4">
-                    <a href="#" class="w-10 h-10 bg-zinc-800 flex items-center justify-center rounded-lg hover:bg-orange-600 transition duration-300">
-                        <i class="fab fa-instagram"></i>
-                    </a>
-                    <a href="#" class="w-10 h-10 bg-zinc-800 flex items-center justify-center rounded-lg hover:bg-orange-600 transition duration-300">
-                        <i class="fab fa-tiktok"></i>
-                    </a>
-                    <a href="#" class="w-10 h-10 bg-zinc-800 flex items-center justify-center rounded-lg hover:bg-orange-600 transition duration-300">
-                        <i class="fab fa-youtube"></i>
+
+                <div>
+                    <h4 style="color: white; margin-bottom: 1.5rem; border-bottom: 1px solid var(--primary); display: inline-block;">Layanan</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Paintball War Game</a></li>
+                        <li><a href="#">Corporate Gathering</a></li>
+                        <li><a href="#">Outbound Lembang</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 style="color: white; margin-bottom: 1.5rem; border-bottom: 1px solid var(--primary); display: inline-block;">Jam Buka</h4>
+                    <ul style="font-size: 0.9rem; font-style: italic;">
+                        <li style="display:flex; justify-content:space-between; padding-bottom:0.5rem; border-bottom:1px solid #27272a; margin-bottom:0.5rem;">
+                            <span>Senin-Jumat</span> <span>08.00 - 17.00</span>
+                        </li>
+                        <li style="display:flex; justify-content:space-between; color: var(--primary); font-weight: bold;">
+                            <span>Sabtu-Minggu</span> <span>07.00 - 18.00</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 style="color: white; margin-bottom: 1.5rem; border-bottom: 1px solid var(--primary); display: inline-block;">Kontak</h4>
+                    <p style="font-size: 0.9rem; margin-bottom: 1rem;">Area Hutan Pinus Cikole, Lembang.</p>
+                    <a href="https://wa.me/62812345678" class="btn" style="background: #25D366; color: white; display: inline-flex; align-items: center; gap: 0.5rem; font-size: 0.8rem;">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                        Chat WhatsApp
                     </a>
                 </div>
             </div>
-
-            <div>
-                <h4 id="layanan-kami" class="text-lg font-bold uppercase tracking-widest mb-6 border-b border-orange-600 inline-block">Layanan Kami</h4>
-                <ul class="space-y-4 text-gray-400 text-sm italic" aria-labelledby="layanan-kami">
-                    <li><a href="#" class="hover:text-orange-500 flex items-center gap-2"><i class="fas fa-caret-right text-orange-600"></i> <span>Paintball War Game</span></a></li>
-                    <li><a href="#" class="hover:text-orange-500 flex items-center gap-2"><i class="fas fa-caret-right text-orange-600"></i> <span>Corporate Gathering</span></a></li>
-                    <li><a href="#" class="hover:text-orange-500 flex items-center gap-2"><i class="fas fa-caret-right text-orange-600"></i> <span>Outbound Lembang</span></a></li>
-                    <li><a href="#" class="hover:text-orange-500 flex items-center gap-2"><i class="fas fa-caret-right text-orange-600"></i> <span>Rafting dan Offroad</span></a></li>
-                </ul>
-            </div>
-
-            <div>
-                <h4 id="jam-operasional" class="text-lg font-bold uppercase tracking-widest mb-6 border-b border-orange-600 inline-block">Waktu Operasional</h4>
-                <ul class="space-y-3" aria-labelledby="jam-operasional">
-                    <li class="flex justify-between text-sm italic border-b border-zinc-800 pb-2"><span class="text-gray-400">Senin - Kamis</span><span class="text-white font-semibold">08.00 – 17.00</span></li>
-                    <li class="flex justify-between text-sm italic border-b border-zinc-800 pb-2"><span class="text-gray-400">Jumat</span><span class="text-white font-semibold">08.00 – 16.30</span></li>
-                    <li class="flex justify-between text-sm italic border-b border-zinc-800 pb-2"><span class="text-orange-500 font-bold">Sabtu - Minggu</span><span class="text-orange-500 font-bold">07.00 – 18.00</span></li>
-                </ul>
-            </div>
-
-            <div>
-                <h4 id="hubungi-kami" class="text-lg font-bold uppercase tracking-widest mb-6 border-b border-orange-600 inline-block">Hubungi Kami</h4>
-                <address class="space-y-4 text-gray-400 text-sm italic not-italic" aria-labelledby="hubungi-kami">
-                    <div class="flex items-start gap-3"><i class="fas fa-map-marker-alt text-orange-600 mt-1"></i><p>Area Hutan Pinus Cikole, Lembang, Bandung.</p></div>
-                    <div class="flex items-center gap-3"><i class="fas fa-phone-alt text-orange-600"></i><a href="tel:+6281234567890" class="hover:text-orange-500">+62 812-3456-7890</a></div>
-                </address>
-                <a href="https://wa.me/62812345678" class="mt-4 block bg-green-600 hover:bg-green-700 text-white text-center py-2 rounded-lg font-bold transition">
-                    <i class="fab fa-whatsapp mr-2"></i> Fast Response Chat
-                </a>
+            <div style="text-align: center; font-size: 0.75rem; color: #52525b; border-top: 1px solid #27272a; padding-top: 1.5rem;">
+                &copy; 2026 Vendor Paintball Bandung. All Rights Reserved.
             </div>
         </div>
-        <div class="pt-8 border-t border-zinc-800 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-gray-500 uppercase tracking-widest">
-            <p>&copy; 2026 Vendor Paintball Bandung. All Rights Reserved.</p>
-            <div class="flex gap-6"><a href="#" class="hover:text-white transition">Sitemap</a><a href="#" class="hover:text-white transition">Privacy Policy</a></div>
-        </div>
-    </div>
-</footer>
+    </footer>
 
-   <div class="fab-container">
-    <div class="fab-btn fab-top" id="backToTop" onclick="backToTop()">
-        <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M12 19V5" /><path d="M5 12l7-7 7 7" />
-        </svg>
+    <div class="fab-container">
+        <button class="fab-btn fab-top" id="backToTop" onclick="backToTop()" aria-label="Kembali ke atas">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5" /><path d="M5 12l7-7 7 7" /></svg>
+        </button>
+        <a href="https://wa.me/62812345678" class="fab-btn fab-wa" aria-label="Chat WhatsApp">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        </a>
     </div>
 
-    <div class="fab-btn fab-wa">
-      <a href="https://wa.me/628123456789?text=Halo" target="_blank" rel="noopener noreferrer" aria-label="Chat WhatsApp" class="fab-link">
-        <svg viewBox="0 0 512 512" width="28" height="28">
-          <path fill="#FFFFFF" d="M256 32C132.3 32 32 128.9 32 248c0 50.6 18.1 97.3 48.3 134.2L48 480l101.6-30.1c33.4 18.3 71.8 28.7 112.4 28.7 123.7 0 224-96.9 224-216.6S379.7 32 256 32z"/>
-          <path fill="#25D366" d="M256 64c-105.9 0-192 83.6-192 184 0 46.3 18.2 89.4 48.4 121.6L96 416l50.5-14.7C177.6 420.8 215.8 432 256 432c105.9 0 192-83.6 192-184S361.9 64 256 64z"/>
-          <path fill="#FFFFFF" d="M341.6 299.2c-5.2-2.6-30.6-15-35.3-16.7-4.7-1.7-8.1-2.6-11.5 2.6-3.4 5.2-13.3 16.7-16.3 20.1-3 3.4-6 3.9-11.2 1.3-30.6-15-50.6-26.8-70.7-60.8-5.2-8.9 5.2-8.3 15-28.2 1.7-3.4.9-6.5-.4-9.1-1.3-2.6-11.5-27.4-15.8-37.6-4.3-10.4-8.7-9.1-11.5-9.1-3 0-6.5-.4-10-.4s-9.1 1.3-13.9 6.5c-4.8 5.2-18.3 17.9-18.3 43.7s18.7 50.8 21.3 54.2c2.6 3.4 36.9 56.3 89.5 78.9 12.5 5.4 22.3 8.6 29.9 11 12.6 4 24.1 3.4 33.2 2.1 10.1-1.5 30.6-12.5 34.9-24.6 4.3-12.1 4.3-22.5 3-24.6-1.3-2.1-4.7-3.4-9.9-6z"/>
-        </svg>
-      </a>
-    </div>
-</div>
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
-<script>
-    // Toggle Mobile Menu
-    const btn = document.getElementById('menu-btn');
-    const menu = document.getElementById('mobile-menu');
-    btn.addEventListener('click', () => {
-        menu.classList.toggle('hidden');
-    });
-
-    // Toggle FAQ
-    function toggleFaq(button) {
-        const content = button.nextElementSibling;
-        const icon = button.querySelector('i');
+    <script>
+        // Toggle Mobile Menu
+        const btn = document.getElementById('menu-btn');
+        const menu = document.getElementById('mobile-menu');
         
-        // Tutup FAQ lain
-        document.querySelectorAll('#faq .faq-content').forEach(item => {
-            if (item !== content) {
-                item.style.maxHeight = null;
-                item.previousElementSibling.querySelector('i').classList.remove('rotate-180');
+        btn.addEventListener('click', () => {
+            const isHidden = menu.classList.contains('hidden');
+            if (isHidden) {
+                menu.classList.remove('hidden');
+                btn.setAttribute('aria-expanded', 'true');
+            } else {
+                menu.classList.add('hidden');
+                btn.setAttribute('aria-expanded', 'false');
             }
         });
 
-        if (content.style.maxHeight) {
-            content.style.maxHeight = null;
-            icon.classList.remove('rotate-180');
-        } else {
-            content.style.maxHeight = content.scrollHeight + "px";
-            icon.classList.add('rotate-180');
-        }
-    }
+        // Toggle FAQ (Optimized)
+        function toggleFaq(button) {
+            const content = button.nextElementSibling;
+            const icon = button.querySelector('svg');
+            const isExpanded = button.getAttribute('aria-expanded') === 'true';
+            
+            // Close all first
+            document.querySelectorAll('.faq-content').forEach(c => c.style.maxHeight = null);
+            document.querySelectorAll('.faq-btn svg').forEach(s => s.classList.remove('rotate'));
+            document.querySelectorAll('.faq-btn').forEach(b => b.setAttribute('aria-expanded', 'false'));
 
-    // Back To Top
-    const topBtn = document.getElementById("backToTop");
-    window.addEventListener("scroll", () => {
-        if (window.scrollY > 300) {
-            topBtn.classList.add("show");
-        } else {
-            topBtn.classList.remove("show");
+            if (!isExpanded) {
+                content.style.maxHeight = content.scrollHeight + "px";
+                icon.classList.add('rotate');
+                button.setAttribute('aria-expanded', 'true');
+            }
         }
-    });
 
-    function backToTop() {
-        window.scrollTo({ top: 0, behavior: "smooth" });
-    }
-</script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+        // Back To Top (Optimized using IntersectionObserver logic equivalent)
+        const topBtn = document.getElementById("backToTop");
+        window.addEventListener("scroll", () => {
+            if (window.scrollY > 300) {
+                topBtn.classList.add("show");
+            } else {
+                topBtn.classList.remove("show");
+            }
+        }, { passive: true });
+
+        function backToTop() {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+        }
+    </script>
 </body>
 </html>
