@@ -1,16 +1,26 @@
-User-agent: *
-Allow: /
+# Sitemaps: Beritahu Google di mana peta situs Anda berada
+Sitemap: https://bdgpaintball-id.vercel.app/sitemap.xml
 
-# Memblokir bot untuk mengakses API internal (jika ada, umum di Vercel/Next.js)
+# Aturan umum untuk semua bot (Googlebot, Bingbot, dll)
+User-agent: *
+
+# Jangan indeks folder sistem atau privat (jika ada)
 Disallow: /api/
 Disallow: /_next/
-Disallow: /admin/
-Disallow: /login/
+Disallow: /private/
 
-# Mencegah crawling pada URL pencarian internal untuk menghemat crawl budget
-Disallow: /search
-Disallow: /*?query=
-Disallow: /*?q=
+# Jangan indeks file dokumen tertentu yang tidak perlu (opsional)
+Disallow: /*.php$
+Disallow: /*.js$
+Disallow: /*.inc$
 
-# Peta Situs (Sitemap)
-Sitemap: https://bdgpaintball-id.vercel.app/sitemap.xml
+# Izinkan perayapan ke semua halaman konten utama
+Allow: /
+
+# Aturan khusus untuk Bot Iklan (agar iklan tetap berjalan lancar)
+User-agent: Mediapartners-Google
+Allow: /
+
+# Aturan khusus untuk Pinterest (opsional, jika Anda menggunakan Pinterest marketing)
+User-agent: Pinterest
+Crawl-delay: 1
