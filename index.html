@@ -35,6 +35,16 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preconnect" href="https://cdnjs.cloudflare.com">
 
+<!-- BOOTSTRAP -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
+
+<!-- FONT -->
+<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+
+<!-- ICON -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -121,28 +131,54 @@
 
 
     <header class="relative bg-zinc-900 text-white overflow-hidden">
-        <div class="container mx-auto px-6 py-16 md:py-24 flex flex-col md:flex-row items-center">
-            <div class="md:w-1/2 mb-10 md:mb-0 z-10 text-center md:text-left">
-                <h1 class="text-5xl md:text-7xl font-bold leading-tight mb-4">RASAKAN SENSASI <span class="text-orange-500 text-outline">TEMPUR</span> DI HUTAN BANDUNG</h1>
-                <p class="text-lg text-gray-300 mb-8">Provider Paintball profesional dengan peralatan standar internasional dan medan tempur paling menantang di Lembang & Pangalengan.</p>
+    <div class="container mx-auto px-5 sm:px-6 py-14 sm:py-16 md:py-24">
+        <div class="flex flex-col md:flex-row items-center gap-12">
+
+            <!-- Text Content -->
+            <div class="md:w-1/2 text-center md:text-left z-10">
+                <h1 class="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-extrabold leading-tight mb-5">
+                    RASAKAN SENSASI
+                    <span class="block md:inline text-orange-500 text-outline">
+                        TEMPUR
+                    </span>
+                    DI HUTAN BANDUNG
+                </h1>
+
+                <p class="text-base sm:text-lg text-gray-300 mb-8 max-w-xl mx-auto md:mx-0">
+                    Provider paintball profesional dengan peralatan standar internasional dan
+                    medan tempur paling menantang di Lembang & Pangalengan.
+                </p>
+
+                <!-- CTA -->
                 <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
-                    <button class="bg-orange-600 px-8 py-4 rounded-lg font-bold text-lg hover:scale-105 transition">Lihat Paket</button>
-                    <button class="border border-white/30 px-8 py-4 rounded-lg font-bold text-lg hover:bg-white/10 transition">Video Teaser</button>
+                    <button
+                        class="bg-orange-600 px-8 py-4 rounded-lg font-bold text-base sm:text-lg hover:scale-105 transition duration-300">
+                        Lihat Paket
+                    </button>
+                    <button
+                        class="border border-white/30 px-8 py-4 rounded-lg font-bold text-base sm:text-lg hover:bg-white/10 transition duration-300">
+                        Video Teaser
+                    </button>
                 </div>
             </div>
+
+            <!-- Image -->
             <div class="md:w-1/2 relative">
-    <div class="w-full h-80 md:h-[450px] overflow-hidden rounded-2xl border-4 border-orange-600/20 bg-zinc-800">
-        <img 
-            src="img/vendor.webp"
-            alt="Aksi seru permainan paintball di Bandung"
-            class="w-full h-full object-cover"
-            loading="lazy"
-            decoding="async"
-        >
-    </div>
-</div>
+                <div class="w-full h-72 sm:h-80 md:h-[450px] overflow-hidden rounded-2xl border border-orange-500/30 bg-zinc-800">
+                    <img
+                        src="img/vendor.webp"
+                        alt="Aksi seru permainan paintball di Bandung"
+                        class="w-full h-full object-cover"
+                        loading="lazy"
+                        decoding="async"
+                    >
+                </div>
+            </div>
+
         </div>
-    </header>
+    </div>
+</header>
+
 
     <section id="about" class="py-20 container mx-auto px-6 text-center">
         <h2 class="text-4xl font-bold mb-6 italic">MENGAPA BDG PAINTBALL?</h2>
@@ -171,51 +207,62 @@
             Layanan Utama Kami
         </h2>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
 
-            <!-- Corporate Gathering -->
-            <div class="group relative overflow-hidden rounded-2xl h-64 bg-black">
-                <img 
-                    src="img/vendor.webp" 
-                    alt="Corporate Gathering"
-                    class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                    loading="lazy"
-                >
+    <!-- Corporate Gathering -->
+    <div 
+        class="group relative overflow-hidden rounded-2xl h-64 bg-black"
+        role="img"
+        aria-labelledby="cg-title cg-desc"
+    >
+        <img 
+            src="img/vendor.webp" 
+            alt="Kegiatan corporate gathering paintball untuk team building perusahaan di Bandung"
+            class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+            loading="lazy"
+            decoding="async"
+        >
 
-                <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent" aria-hidden="true"></div>
 
-                <div class="absolute bottom-6 left-6 z-10">
-                    <h3 class="text-2xl font-bold text-white uppercase">
-                        Corporate Gathering
-                    </h3>
-                    <p class="text-orange-400">
-                        Team Building & Refreshing Karyawan
-                    </p>
-                </div>
-            </div>
-
-            <!-- Fun War Game -->
-            <div class="group relative overflow-hidden rounded-2xl h-64 bg-black">
-                <img 
-                    src="img/vendor4.webp" 
-                    alt="Fun War Game"
-                    class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                    loading="lazy"
-                >
-
-                <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"></div>
-
-                <div class="absolute bottom-6 left-6 z-10">
-                    <h3 class="text-2xl font-bold text-white uppercase">
-                        Fun War Game
-                    </h3>
-                    <p class="text-orange-400">
-                        Main Seru Bareng Teman & Komunitas
-                    </p>
-                </div>
-            </div>
-
+        <div class="absolute bottom-6 left-6 z-10">
+            <h3 id="cg-title" class="text-2xl font-bold text-white uppercase">
+                Corporate Gathering
+            </h3>
+            <p id="cg-desc" class="text-orange-400">
+                Team Building &amp; Refreshing Karyawan
+            </p>
         </div>
+    </div>
+
+    <!-- Fun War Game -->
+    <div 
+        class="group relative overflow-hidden rounded-2xl h-64 bg-black"
+        role="img"
+        aria-labelledby="fw-title fw-desc"
+    >
+        <img 
+            src="img/vendor4.webp" 
+            alt="Permainan fun war game paintball seru bersama teman dan komunitas di Bandung"
+            class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+            loading="lazy"
+            decoding="async"
+        >
+
+        <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent" aria-hidden="true"></div>
+
+        <div class="absolute bottom-6 left-6 z-10">
+            <h3 id="fw-title" class="text-2xl font-bold text-white uppercase">
+                Fun War Game
+            </h3>
+            <p id="fw-desc" class="text-orange-400">
+                Main Seru Bareng Teman &amp; Komunitas
+            </p>
+        </div>
+    </div>
+
+</div>
+
     </div>
 </section>
 
@@ -737,9 +784,8 @@ function backToTop() {
 }
 </script>
 
-<script
-  src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-  defer>
-</script>
+
+
+<script src="https://cdn.tailwindcss.com" defer></script>
 </body>
 </html>
