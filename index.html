@@ -299,43 +299,88 @@
         </div>
     </section>
 
-    <section id="service" class="section-py" style="background-color: #f4f4f5;">
-        <div class="container">
-            <h2 class="text-center" style="margin-bottom: 3rem;">Layanan Utama Kami</h2>
-            <div class="service-grid">
-                <div class="service-item">
-                    <img 
-  src="img/vendor.webp"
-  width="600"
-  height="400"
-  loading="lazy"
-  decoding="async"
-  fetchpriority="low"
-  alt="Tim karyawan melakukan corporate gathering paintball">
-                    <div class="service-text">
-                        <h3>Corporate Gathering</h3>
-                        <p class="text-primary font-bold">Team Building &amp; Refreshing</p>
-                    </div>
-                </div>
+  <section
+    id="service"
+    class="section-py"
+    style="background-color:#f4f4f5;contain:content;"
+>
+    <div class="container">
+        <h2 class="text-center service-title">Layanan Utama Kami</h2>
 
-                <div class="service-item">
-                    <img 
-  src="img/vendor4.webp"
-  width="600"
-  height="400"
-  loading="lazy"
-  decoding="async"
-  fetchpriority="low"
-  alt="Tim karyawan melakukan corporate gathering paintball">
-
-                    <div class="service-text">
-                        <h3>Fun War Game</h3>
-                        <p class="text-primary font-bold">Main Seru Bareng Komunitas</p>
-                    </div>
+        <div class="service-grid">
+            <article class="service-item">
+                <img
+                    src="img/vendor.webp"
+                    srcset="
+                        img/vendor.webp 400w,
+                        img/vendor.webp 800w
+                    "
+                    sizes="(max-width:768px) 100vw, 600px"
+                    width="600"
+                    height="400"
+                    loading="lazy"
+                    decoding="async"
+                    fetchpriority="low"
+                    alt="Tim karyawan melakukan corporate gathering paintball"
+                >
+                <div class="service-text">
+                    <h3>Corporate Gathering</h3>
+                    <p class="service-desc">Team Building &amp; Refreshing</p>
                 </div>
-            </div>
+            </article>
+
+            <article class="service-item">
+                <img
+                    src="img/vendor4.webp"
+                    srcset="
+                        img/vendor4.webp 400w,
+                        img/vendor4.webp 800w
+                    "
+                    sizes="(max-width:768px) 100vw, 600px"
+                    width="600"
+                    height="400"
+                    loading="lazy"
+                    decoding="async"
+                    fetchpriority="low"
+                    alt="Permainan fun war game paintball bersama komunitas"
+                >
+                <div class="service-text">
+                    <h3>Fun War Game</h3>
+                    <p class="service-desc">Main Seru Bareng Komunitas</p>
+                </div>
+            </article>
         </div>
-    </section>
+    </div>
+</section>
+
+<style>
+   /* Hindari CLS & layout recalculation */
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.service-item {
+    contain: layout paint;
+}
+
+.service-item img {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 3 / 2;
+}
+
+.service-title {
+    margin-bottom: 3rem;
+}
+
+.service-desc {
+    font-weight: 700;
+}
+
+</style>
 
     <section style="background-color: var(--primary); padding: 3rem 0; color: white;">
         <div class="container" style="display: flex; flex-direction: column; align-items: center; gap: 1.5rem; text-align: center;">
