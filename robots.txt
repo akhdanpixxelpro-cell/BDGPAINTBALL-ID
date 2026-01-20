@@ -1,26 +1,20 @@
-# Sitemaps: Beritahu Google di mana peta situs Anda berada
+# Sitemaps: Membantu Google menemukan semua halaman Anda
 Sitemap: https://bdgpaintball-id.vercel.app/sitemap.xml
 
-# Aturan umum untuk semua bot (Googlebot, Bingbot, dll)
+# Aturan untuk semua mesin telusur (Google, Bing, Yandex, dll)
 User-agent: *
 
-# Jangan indeks folder sistem atau privat (jika ada)
-Disallow: /api/
+# Jangan index folder sistem atau API jika ada (umum di Vercel/Next.js)
 Disallow: /_next/
-Disallow: /private/
+Disallow: /api/
 
-# Jangan indeks file dokumen tertentu yang tidak perlu (opsional)
-Disallow: /*.php$
-Disallow: /*.js$
-Disallow: /*.inc$
+# Jangan index parameter pencarian internal untuk menghindari konten duplikat
+Disallow: /*?s=
+Disallow: /*?search=
 
-# Izinkan perayapan ke semua halaman konten utama
+# Izinkan semua halaman konten lainnya untuk dirayapi
 Allow: /
 
-# Aturan khusus untuk Bot Iklan (agar iklan tetap berjalan lancar)
-User-agent: Mediapartners-Google
+# Aturan khusus untuk file gambar agar tetap muncul di Google Images
+User-agent: Googlebot-Image
 Allow: /
-
-# Aturan khusus untuk Pinterest (opsional, jika Anda menggunakan Pinterest marketing)
-User-agent: Pinterest
-Crawl-delay: 1
