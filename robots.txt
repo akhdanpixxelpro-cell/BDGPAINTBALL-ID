@@ -1,21 +1,17 @@
-# Berikan akses penuh ke semua crawler
+# User-agent: * berarti aturan ini berlaku untuk semua robot mesin pencari
 User-agent: *
 
-# Blokir akses ke folder sistem atau file konfigurasi (standar Vercel/Next.js)
-Disallow: /_next/
+# Izinkan perayapan ke seluruh halaman utama
+Allow: /
+
+# Blokir akses ke folder sistem atau file internal (jika ada)
 Disallow: /api/
-Disallow: /public/
+Disallow: /_next/
+Disallow: /private/
 
-# Blokir file privat yang mungkin terunggah
-Disallow: .env
-Disallow: .git
-
-# Blokir parameter pencarian atau filter agar tidak dianggap konten duplikat (opsional)
+# Blokir parameter pencarian atau filter yang bisa menyebabkan duplikasi konten
 Disallow: /*?
-Disallow: /*&
+Disallow: /*.json$
 
-# Izinkan crawler untuk mengakses folder gambar/aset
-Allow: /_next/static/
-
-# Tentukan lokasi Sitemap untuk memudahkan indeksasi
-Sitemap: https://vendorpaintballmlng.vercel.app/sitemap.xml
+# Tentukan lokasi XML Sitemap untuk mempercepat indeksasi
+Sitemap: https://bdgpaintball-id.vercel.app/sitemap.xml
