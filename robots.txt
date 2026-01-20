@@ -1,20 +1,21 @@
-# Sitemaps: Membantu Google menemukan semua halaman Anda
-Sitemap: https://bdgpaintball-id.vercel.app/sitemap.xml
-
-# Aturan untuk semua mesin telusur (Google, Bing, Yandex, dll)
+# Berikan akses penuh ke semua crawler
 User-agent: *
 
-# Jangan index folder sistem atau API jika ada (umum di Vercel/Next.js)
+# Blokir akses ke folder sistem atau file konfigurasi (standar Vercel/Next.js)
 Disallow: /_next/
 Disallow: /api/
+Disallow: /public/
 
-# Jangan index parameter pencarian internal untuk menghindari konten duplikat
-Disallow: /*?s=
-Disallow: /*?search=
+# Blokir file privat yang mungkin terunggah
+Disallow: .env
+Disallow: .git
 
-# Izinkan semua halaman konten lainnya untuk dirayapi
-Allow: /
+# Blokir parameter pencarian atau filter agar tidak dianggap konten duplikat (opsional)
+Disallow: /*?
+Disallow: /*&
 
-# Aturan khusus untuk file gambar agar tetap muncul di Google Images
-User-agent: Googlebot-Image
-Allow: /
+# Izinkan crawler untuk mengakses folder gambar/aset
+Allow: /_next/static/
+
+# Tentukan lokasi Sitemap untuk memudahkan indeksasi
+Sitemap: https://vendorpaintballmlng.vercel.app/sitemap.xml
