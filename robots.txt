@@ -1,17 +1,17 @@
-# User-agent: * berarti aturan ini berlaku untuk semua robot mesin pencari
+# User-agent: * memberikan instruksi untuk semua mesin pencari (Google, Bing, DuckDuckGo, dll)
 User-agent: *
 
-# Izinkan perayapan ke seluruh halaman utama
+# Izinkan semua konten utama untuk dirayapi
 Allow: /
 
-# Blokir akses ke folder sistem atau file internal (jika ada)
+# Blokir folder sistem atau privat (jika ada)
 Disallow: /api/
 Disallow: /_next/
 Disallow: /private/
 
-# Blokir parameter pencarian atau filter yang bisa menyebabkan duplikasi konten
-Disallow: /*?
-Disallow: /*.json$
+# Blokir parameter pencarian internal untuk menghindari konten duplikat
+Disallow: /*?s=
+Disallow: /*?search=
 
-# Tentukan lokasi XML Sitemap untuk mempercepat indeksasi
+# Tentukan lokasi XML Sitemap untuk mempercepat pengindeksan
 Sitemap: https://bdgpaintball-id.vercel.app/sitemap.xml
